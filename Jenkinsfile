@@ -14,7 +14,7 @@ pipeline {
     stage('Pulumi up') {
       steps {
         sh '''
-           #pulumi stack select "${PULUMI_STACK}"
+           pulumi stack select "${PULUMI_STACK}"
            #pulumi config set aws:region us-east-1
            #pulumi up --yes
         '''
